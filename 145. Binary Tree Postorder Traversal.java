@@ -49,4 +49,5 @@ Complexity
 Time complexity: O(n)
 We visit each node exactly once, where n is the number of nodes in the tree.
 Space complexity: O(n)
-In the worst case, the space complexity is linear due to the recursion stack. This happens in scenarios where the tree is skewed, meaning all nodes are either to the left or right.*/
+In the worst case, the space complexity is linear due to the recursion stack. This happens in scenarios where the tree is skewed, meaning all nodes are either to the left or right.
+*/
