@@ -2,21 +2,22 @@
 class Solution {
     public String reverseWords(String s) {
         s = s.trim();
+        if(s.length()==0 || s.length()==1){
+            return s;
+        }
         StringBuilder res = new StringBuilder();
-        int end = s.length() - 1;
+        int end = s.length()-1;
         int start;
-        while (end >= 0) {
-            while (end >= 0 && s.charAt(end) == ' ') {
-                end--;
-            }
-            if (end < 0)
-                break;
+        while(end>=0){
             start = end;
-            while (start >= 0 && s.charAt(start) != ' ') {
+            while(start>=0 && s.charAt(start)!=' '){
                 start--;
             }
-            res.append(s.substring(start + 1, end + 1)).append(" ");
-            end = start - 1;
+            res.append(s.substring(start+1,end+1)).append(" ");
+            end =  start-1;
+            while(end>=0 && s.charAt(end)==' '){
+                end--;
+            }
         }
         return res.toString().trim();
     }
